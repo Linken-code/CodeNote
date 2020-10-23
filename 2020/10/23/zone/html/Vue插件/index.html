@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Hello World - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-23 14:31" pubdate>
+      <time datetime="2020-10-23 13:00" pubdate>
         October 23, 2020 pm
       </time>
     </span>
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      835 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      12
        分钟
     </span>
   
@@ -217,23 +217,317 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none"></h1>
             
             <div class="markdown-body" id="post-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+              <div class="content">
+    <div class="main">
+        <div class="title">
+            <h1>Vue插件</h1>
+        </div>
+        <p></p>
+        <div class="list" id="s1">
+            <h2>1.vue-codemirror</h2>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp>npm i codemirror --save</xmp></pre>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><template>
+    <div class="in-coder-panel">
+        <textarea ref="textarea"></textarea>
+        <el-select class="code-mode-select" v-model="mode" @change="changeMode">
+          <el-option v-for="mode in modes" :key="mode.value" :label="mode.label" :value="mode.value"></el-option>
+        </el-select>
+      </div>
+</template>
+    
+<script>
+    // 引入全局实例
+    import _CodeMirror from 'codemirror'
+    
+    // 核心样式
+    import 'codemirror/lib/codemirror.css'
+    // 引入主题后还需要在 options 中指定主题才会生效
+    import 'codemirror/theme/cobalt.css'
+    
+    // 需要引入具体的语法高亮库才会有对应的语法高亮效果
+    // codemirror 官方其实支持通过 /addon/mode/loadmode.js 和 /mode/meta.js 来实现动态加载对应语法高亮库
+    // 但 vue 貌似没有无法在实例初始化后再动态加载对应 JS ，所以此处才把对应的 JS 提前引入
+    import 'codemirror/mode/javascript/javascript.js'
+    import 'codemirror/mode/css/css.js'
+    import 'codemirror/mode/xml/xml.js'
+    import 'codemirror/mode/clike/clike.js'
+    import 'codemirror/mode/markdown/markdown.js'
+    import 'codemirror/mode/python/python.js'
+    import 'codemirror/mode/r/r.js'
+    import 'codemirror/mode/shell/shell.js'
+    import 'codemirror/mode/sql/sql.js'
+    import 'codemirror/mode/swift/swift.js'
+    import 'codemirror/mode/vue/vue.js'
+    
+    // 尝试获取全局实例
+    const CodeMirror = window.CodeMirror || _CodeMirror
+    
+    export default {
+      name: 'in-coder',
+      props: {
+        // 外部传入的内容，用于实现双向绑定
+        value: String,
+        // 外部传入的语法类型
+        language: {
+          type: String,
+          default: null
+        }
+      },
+      data() {
+        return {
+          // 内部真实的内容
+          code: '',
+          // 默认的语法类型
+          mode: 'javascript',
+          // 编辑器实例
+          coder: null,
+          // 默认配置
+          options: {
+            // 缩进格式
+            tabSize: 2,
+            // 主题，对应主题库 JS 需要提前引入
+            theme: 'cobalt',
+            // 显示行号
+            lineNumbers: true,
+            line: true
+          },
+          // 支持切换的语法高亮类型，对应 JS 已经提前引入
+          // 使用的是 MIME-TYPE ，不过作为前缀的 text/ 在后面指定时写死了
+          modes: [
+            {
+              value: 'css',
+              label: 'CSS'
+            },
+            {
+              value: 'javascript',
+              label: 'Javascript'
+            },
+            {
+              value: 'html',
+              label: 'XML/HTML'
+            },
+            {
+              value: 'x-java',
+              label: 'Java'
+            },
+            {
+              value: 'x-objectivec',
+              label: 'Objective-C'
+            },
+            {
+              value: 'x-python',
+              label: 'Python'
+            },
+            {
+              value: 'x-rsrc',
+              label: 'R'
+            },
+            {
+              value: 'x-sh',
+              label: 'Shell'
+            },
+            {
+              value: 'x-sql',
+              label: 'SQL'
+            },
+            {
+              value: 'x-swift',
+              label: 'Swift'
+            },
+            {
+              value: 'x-vue',
+              label: 'Vue'
+            },
+            {
+              value: 'markdown',
+              label: 'Markdown'
+            }
+          ]
+        }
+      },
+      mounted() {
+        // 初始化
+        this._initialize()
+      },
+      methods: {
+        // 初始化
+        _initialize() {
+          // 初始化编辑器实例，传入需要被实例化的文本域对象和默认配置
+          this.coder = CodeMirror.fromTextArea(this.$refs.textarea, this.options)
+          // 编辑器赋值
+          this.coder.setValue(this.value || this.code)
+    
+          // 支持双向绑定
+          this.coder.on('change', coder => {
+            this.code = coder.getValue()
+    
+            if (this.$emit) {
+              this.$emit('input', this.code)
+            }
+          })
+    
+          // 尝试从父容器获取语法类型
+          if (this.language) {
+            // 获取具体的语法类型对象
+            let modeObj = this._getLanguage(this.language)
+    
+            // 判断父容器传入的语法是否被支持
+            if (modeObj) {
+              this.mode = modeObj.label
+            }
+          }
+        },
+        // 获取当前语法类型
+        _getLanguage(language) {
+          // 在支持的语法类型列表中寻找传入的语法类型
+          return this.modes.find(mode => {
+            // 所有的值都忽略大小写，方便比较
+            let currentLanguage = language.toLowerCase()
+            let currentLabel = mode.label.toLowerCase()
+            let currentValue = mode.value.toLowerCase()
+    
+            // 由于真实值可能不规范，例如 java 的真实值是 x-java ，所以讲 value 和 label 同时和传入语法进行比较
+            return (
+              currentLabel === currentLanguage || currentValue === currentLanguage
+            )
+          })
+        },
+        // 更改模式
+        changeMode(val) {
+          // 修改编辑器的语法配置
+          this.coder.setOption('mode', `text/${val}`)
+    
+          // 获取修改后的语法
+          let label = this._getLanguage(val).label.toLowerCase()
+    
+          // 允许父容器通过以下函数监听当前的语法值
+          this.$emit('language-change', label)
+        }
+      }
+    }
+    </script>
+    
+<style lang="less" scoped>
+    .in-coder-panel {
+      flex-grow: 1;
+      display: flex;
+      position: relative;
+      .CodeMirror {
+        flex-grow: 1;
+        z-index: 1;
+        .CodeMirror-code {
+          line-height: 19px;
+        }
+      }
+      .code-mode-select {
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        top: 10px;
+        max-width: 130px;
+      }
+    }
+</style></xmp></pre>
+            </div>
+        </div>
+        <div class="list" id="s2">
+            <h2>2.vue-json-viewer</h2>
+            <p></p>
+            <p></p>
+            <p>将json字符串在网页显示出来，可伸缩</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp>npm install vue-json-viewer --save</xmp></pre>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><template>
+ <div class="app-container">
+    <div>
+        <el-collapse v-model="activeNames">
+          <el-collapse-item
+            v-for="(item,index) in dataList"
+            :name="index+1"
+            :key="index"
+            :title="item.name"
+          >
+            <el-row :gutter="100">
+              <el-col :span="11">
+                <div>
+                  <json-viewer :value="item.value"></json-viewer>
+                </div>
+              </el-col>
+              <el-col :span="11">
+                <div>
+                  <json-viewer :value="item.value"></json-viewer>
+                </div>
+              </el-col>
+            </el-row>
+          </el-collapse-item>
+        </el-collapse>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import JsonViewer from 'vue-json-viewer'
+  export default {
+    components: {
+      'json-viewer': JsonViewer
+    },
+    data() {
+      return {
+        activeNames: [],
+        dataList: [
+          {
+            name: '1',
+            value: {
+              total: 25,
+              limit: 10,
+              skip: 0,
+              links: {
+                previous: undefined,
+                next: function() {}
+              }
+            }
+          },
+          {
+            name: '2',
+            value: {
+              total: 25,
+              limit: 10,
+              skip: 0,
+              links: {
+                previous: undefined,
+                next: function() {}
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+  </script>
+  <style lang='scss' scoped>
+  </style></xmp></pre>
+            </div>
+            <p></p>
+            <p>具体属性</p>
+            <p></p>
+            <img src="../image/1584558445041-ec9a3307-7895-410e-8849-762e65c4c769.png" alt="" srcset="" width="750px">
+        </div>
+    </div>
+</div>
             </div>
             <hr>
             <div>
@@ -249,11 +543,17 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2020/10/23/zone/html/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/23/zone/html/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                      <a href="/2020/10/23/zone/html/Vue.js/">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -390,7 +690,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Hello World&nbsp;",
+        "&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

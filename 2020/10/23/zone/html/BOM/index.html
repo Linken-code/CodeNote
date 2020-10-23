@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Hello World - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-23 14:31" pubdate>
+      <time datetime="2020-10-23 13:00" pubdate>
         October 23, 2020 pm
       </time>
     </span>
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      1.5k 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      17
        分钟
     </span>
   
@@ -217,23 +217,206 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none"></h1>
             
             <div class="markdown-body" id="post-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+              <div class="content">
+    <div class="main">
+        <div class="title">
+            <h1>BOM</h1>
+            <p></p>
+            <p>BOM全称Browser Object Model(浏览器对象模型),是用于描述这种对象与对象之间层次关系的模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构，BOM可以使我们通过JS来操作浏览器</p>
+            <p></p>
+            <p>BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象</p>
+            <p></p>
+            <ul>
+                <li>Window-代表的是整个浏览器的窗口，同时window也是网页中的全局对象</li>
+                <li>Navigator-代表当前浏览器的信息，通过该对象可以来识别不同的浏览器</li>
+                <li>Location-代表当前浏览的地址栏信息，通过Location可以获取地址栏信息，或者操作浏览器跳转页面</li>
+                <li>History-代表浏览器的历史记录，可以通过该对象来操作浏览器的历史记录，由于隐私原因，该对象不能获取到具体的历史记录，只能操作浏览器向前和向翻页，而且该操作只在当次访问时游戏</li>
+                <li>Screen-代表用户的屏幕信息，通过该对象可以获取到用户的显示器的相关信息</li>
+            </ul>
+            <p></p>
+            <p>Window下方的BOM对象在浏览器中都是作为window对象的属性保存的，可以通过window对象来使用，也可以直接使用navigator location history screen</p>
+            <p></p>
+        </div>
+        <div class="list" id="s1">
+            <h2>1.Navigator</h2>
+            <p></p>
+            <p>Navigator代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器，由于历史原因，Navigator对象中的大部分属性已经不能帮助我们识别浏览器了</p>
+            <p></p>
+            <p>一般我们只会使用userAgent属性来判断浏览器的信息,userAgent是一个字符串，这个字符串包含有用来描述浏览器信息的内容，不同的浏览器会有不同的userAgent，usetAgent里面会有与浏览器相关的标识，但在IE11中已经将微软和IE相关的标识都已经取消了，所以我们基本已经不能通过UserAgent识别一个浏览器是否是IE浏览器</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>//chrome浏览器
+console.log(navigator.userAgent);
+//Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 
+Chrome/71.0.3578.98 Safari/537.36</code></pre>
+            </div>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>if(navigator.userAgent.indexOf("MSIE")!==-1)&#123;
+    alert("IE");
+&#125;else&#123;
+    alert("not IE")
+&#125;</code></pre>
+            </div>
+            <p></p>
+            <p>如果通过userAgent属性不能判断，还可以通过一些浏览器中特有的对象，来判断浏览器的信息，比如：通过ActiveXObject属性判断是否为IE浏览器</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>//通过"ActiveXObject" in window来判断是不是IE浏览器
+console.log("ActiveXObject" in window);</code></pre>
+            </div>
+        </div>
+        <div class="list" id="s2">
+            <h2>2.History</h2>
+            <p></p>
+            <p>History对象可以用来操作浏览器向前或向后翻页</p>
+            <p></p>
+            <ul>
+                <li>length属性，可以获取到当次访问的链接数量</li>
+                <li>back()方法可以用来退到上一个页面，作用和浏览器的回退按钮一样
+                    <div class="codeMirror">
+                        <pre><code> history.back();</code></pre>
+                    </div>
+                </li>
+                <li>forward()方法可以跳转下一个页面，作用和浏览器的前进按钮一样
+                    <div class="codeMirror">
+                        <pre><code>history.forward()</code></pre>
+                    </div>
+                </li>
+                <li>go()方法可以用来跳转到指定页面，该方需要一个整数作为参数
+                    <br/>参数用法:1表示向前跳转一个页面，2表示向前跳转2个页面，-1表示向后跳转一个页面，-2表示向后跳转2个页面
+                    <div class="codeMirror">
+                        <pre><code>history.go(1);
+history.go(-1); </code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list" id="s3">
+            <h2>3.Location</h2>
+            <p></p>
+            <p>Location对象中封装了浏览器的地址栏信息</p>
+            <p></p>
+            <ul>
+                <li>直接打印location对象可以获取到地址栏的信息(当前页面的完整路径)</li>
+                <li>如果直接将location属性修改为一个完整的路径，或相对路径，则页面会自动跳转到该路径，并且会生成相应的历史记录
+                    <div class="codeMirror">
+                        <pre><code>location="https://www.baidu.com";</code></pre>
+                    </div>
+                </li>
+            </ul>
+            <p></p>
+            <p>Location对象的属性</p>
+            <p></p>
+            <table>
+                <tr>
+                    <td>属性</td>
+                    <td>描述</td>
+                </tr>
+                <tr>
+                    <td>hash</td>
+                    <td>返回一个URL的锚部分</td>
+                </tr>
+                <tr>
+                    <td>host</td>
+                    <td>返回一个URL的主机名和端口</td>
+                </tr>
+                <tr>
+                    <td>hostname</td>
+                    <td>返回URL的主机名</td>
+                </tr>
+                <tr>
+                    <td>href</td>
+                    <td>返回完整的URL</td>
+                </tr>
+                <tr>
+                    <td>pathname</td>
+                    <td>返回的URL路径名</td>
+                </tr>
+                <tr>
+                    <td>port</td>
+                    <td>返回一个URL服务器使用的端口号</td>
+                </tr>
+                <tr>
+                    <td>protocol</td>
+                    <td>返回一个URL协议</td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td>返回一个URL的查询部分</td>
+                </tr>
+            </table>
+            <p></p>
+            <p>Location对象的方法</p>
+            <p></p>
+            <ul>
+                <li>assign()方法用来跳转到其他页面，作用和直接修改location一样
+                    <div class="codeMirror">
+                        <pre><code>location.assign("https://www.baidu.com");</code></pre>
+                    </div>
+                </li>
+                <li>reload()方法会重新加载当前页面，作用和刷新按钮一样，该方法可以接受一个布尔值参数,默认是flase,代表只刷新当前页面,不清除页面的缓存内容(一般的刷新都会有缓存留着input标签里面的文字),如果传入true则会强制清空页面缓存内容<br/>注意:如果要通过刷新按钮清空页面缓存,需要同时按住ctrl和F5
+                    <div class="codeMirror">
+                        <pre><code>location.reload();//不清除缓存
+location.reload(true);//清除缓存</code></pre>
+                    </div>
+                </li>
+                <li>replace()方法可以使用一个新的页面替换当前页面，调用完毕也会跳转页面，不会生成历史记录，所以不能使用回退按钮回退
+                    <div class="codeMirror">
+                        <pre><code>location.replace("https://www.baidu.com");</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list" id="s4">
+            <h2>4.Window</h2>
+            <p></p>
+            <ul>
+                <li>open()方法打开一个新的浏览器窗口或查找一个已命名的窗口,该方法的返回值是新窗口的window对象
+                    <div class="codeMirror">
+                        <pre><code>window.open(url,target);//url默认是打开一个新的空白页面,target默认是打开新窗口
+window.open("https://www.baidu.com","_self");//在自身页面打开,域名必须要加上协议</code></pre>
+                    </div>
+                </li>
+                <li>close()方法关闭浏览器窗口
+                    <div class="codeMirror">
+                        <pre><code>window.close();</code></pre>
+                    </div>
+                </li>
+                <li>setInterval()方法按照指定的周期(以毫秒计)来调用函数或计算表达式</li>
+                <li>setTimeout()方法在指定的毫秒数后调用函数偶计算表达式</li>
+                <li>clearInterval()方法取消由setInterval()设置的定时器</li>
+                <li>clearTimeout()方法取消由setTimeout()方法设置的定时器</li>
+                <li>scrollTo()方法把内容滚动到指定坐标
+                    <div class="codeMirror">
+                        <pre><code>document.onclick=function()&#123;
+    window.scrollTo(0,500);
+&#125;</code></pre>
+                    </div>
+                </li>
+                <li>scrollBy()方法按照指定像素来滚动内容,不带px单位<br/>参数
+                    <ul>
+                        <li>xnum,把文档向右滚动的像素数</li>
+                        <li>ynum,把文档向下滚动的像素数</li>
+                    </ul>
+                    <div class="codeMirror">
+                        <pre><code>document.onclick=function()&#123;
+    window.scrollBy(0,500);
+&#125;</code></pre>
+                    </div>
+                </li>
+                <li>alert("内容")警告框</li>
+                <li>confirm("文本")确认框</li>
+                <li>prompt("文本","默认值")提示框</li>
+            </ul>
+        </div>
+    </div>
+</div>
             </div>
             <hr>
             <div>
@@ -249,11 +432,17 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2020/10/23/zone/html/css/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/23/zone/html/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                      <a href="/2020/10/23/zone/html/Ajax/">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -390,7 +579,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Hello World&nbsp;",
+        "&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
