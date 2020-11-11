@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="theme-color" content="#2f4154">
+    <meta name="description" content="">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="">
+    <title>Hexo</title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+    <link rel="stylesheet" href="/lib/hint/hint.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+
+
+
+
+    <!-- 主题依赖的图标库，不要自行修改 -->
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <!-- 自定义样式保持在最底部 -->
+
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/color-schema.js"></script>
+    <meta name="generator" content="Hexo 5.2.0">
+</head>
+
+
+<body>
+    <header style="height: 70vh;">
+        <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">&nbsp;<strong>我的个人博客</strong>&nbsp;</a>
+
+                <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center">
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="iconfont icon-home-fill"></i> 首页
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/archives/">
+                                <i class="iconfont icon-archive-fill"></i> 档案
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories/">
+                                <i class="iconfont icon-category-fill"></i> 种类
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tags/">
+                                <i class="iconfont icon-tags-fill"></i> 标签
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">
+                                <i class="iconfont icon-user-fill"></i> 关于
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav-item" id="search-btn">
+                            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+                        </li>
+
+
+                        <li class="nav-item" id="color-toggle-btn">
+                            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="banner intro-2" id="background" parallax=true style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+            <div class="full-bg-img">
+                <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+                    <div class="container page-header text-center fade-in-up">
+                        <span class="h2" id="subtitle">存储数据</span>
+                        <div class="mt-3">
+                            <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-23 13:00" pubdate>
+        October 23, 2020 pm
+      </time>
+    </span>
+                        </div>
+
+                        <div class="mt-1">
+
+
+                            <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      899 字
+    </span>
+
+
+
+
+                            <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-2"></div>
+                <div class="col-lg-8 nopadding-md">
+                    <div class="container nopadding-md" id="board-ctn">
+                        <div class="py-5" id="board">
+                            <article class="post-content mx-auto" id="post">
+                                <!-- SEO header -->
+                                <h1 style="display: none"></h1>
+
+                                <div class="markdown-body" id="post-body">
+                                    <div class="content">
+                                        <div class="main">
+                                            <div class="title">
+                                                <h1>存储数据</h1>
+                                            </div>
+                                            <p></p>
+                                            <div class="list" id="s1">
+                                                <h2>1. Cookie</h2>
+                                                <p></p>
+                                                <p>cookie用于存储数据,当用户访问了某个网站(网页)的时候,可以通过cookie来访问客户端上存储的数据</p>
+                                                <p></p>
+                                                <p>注意:</p>
+                                                <p></p>
+                                                <ul>
+                                                    <li>不同的浏览器存放的cookie位置不一样，也是不能通用的</li>
+                                                    <li>cookie的存储是以域名形式进行区分的</li>
+                                                    <li>cookie的数据可以设置名字的</li>
+                                                    <li>一个域名下存放的cookie的个数是有限制的，不同的浏览器存放的个数不一样</li>
+                                                    <li>每个cookie存放的内容大小也是有限制的，不同的浏览器存放大小不一样</li>
+                                                </ul>
+                                                <p></p>
+                                                <h3 id="s1.1">1.1 访问cookie</h3>
+                                                <p></p>
+                                                <p>通过document.cookie属性可以获取当前网站下的所有cookie,得到字符串形式的值,该返回值会将所有的cookie通过分号+空格的形式串联起来</p>
+                                                <p></p>
+                                                <div class="codeMirror">
+                                                    <pre><code>console.log(document.cookie);</code></pre>
+                                                </div>
+                                                <p></p>
+                                                <h3 id="s1.2">1.2 存储cookie</h3>
+                                                <p></p>
+                                                <div class="codeMirror">
+                                                    <pre><code>document.cookie = '数据名=值';</code></pre>
+                                                </div>
+                                                <p></p>
+                                                <p>注意:</p>
+                                                <ul>
+                                                    <li>如果设置不同的cookie值,则用document.cookie再次赋值不会将原来设置的cookie覆盖掉,而是再加上一条cookie</li>
+                                                    <li>如果设置相同的cookie值,则再次用document.coolkie设置cookie值时会将原来的cookie值覆盖掉</li>
+                                                </ul>
+                                                <p></p>
+                                                <h3 id="s1.3">1.3 设置cookie过期时间</h3>
+                                                <p></p>
+                                                <p>cookie默认是临时存储的,当浏览器关闭进程的时候自动销毁 ,如果想长时间存放一个cookie。需要在设置这个cookie的时候设置一个过期的时间</p>
+                                                <p></p>
+                                                <p>注意:过期时间必须是一个日期对象转换成的字符串</p>
+                                                <p></p>
+                                                <p>document.cookie = "数据名=值; expires=过期时间";</p>
+                                                <p></p>
+                                                <div class="codeMirror">
+                                                    <pre><code>var oDate = new Date();
+    oDate.setDate(oDate.getDate()+5);
+    oDate.toUTCString();//转换为日期字符串
+                            
+    document.cookie='age=20; expires='+oDate;
+    
+    //转码
+    var content= encodeURI("20");
+    document.cookie="agex="+content+";expires="+oDate;</code></pre>
+                                                </div>
+                                                <p></p>
+                                                <h3 id="s1.4">1.4 cookie封装</h3>
+                                                <p></p>
+                                                <ul>
+                                                    <li>设置cookie封装
+                                                        <div class="codeMirror">
+                                                            <pre><code>function setCookie(obj,time)&#123;
+        for(key in obj)&#123;
+            var d = new Date();
+            d.setDate(d.getDate()+time);
+            document.cookie = key+'='+obj[key]+'; expires='+d.toUTCString();
+        &#125;
+    &#125;
+    
+    
+    setCookie(&#123;
+        name:'zhangsan',
+        sex:'man',
+        age:18
+    &#125;,5);//5天后自动删除cookie</code></pre>
+                                                        </div>
+                                                    </li>
+                                                    <li>获取cookie封装
+                                                        <div class="codeMirror">
+                                                            <pre><code>function getCookie(name)&#123;//这里是用的arguments来设置的,所以可以获取多个cookie值
+        var cookie = document.cookie;
+        var result = &#123;&#125;;
+        for(key in arguments)&#123;
+            var value = '\\b'+arguments[key]+'=(\\w*)+';
+    
+            var reg =new RegExp(value,'i');
+            value = reg.exec(cookie);
+            
+            result[arguments[key]] = value?decodeURI(value[1]):null;//解码
+        &#125;
+        return result;
+    &#125;
+    
+    console.log( getCookie("name","sex","age"));//能够查找多个</code></pre>
+                                                        </div>
+                                                    </li>
+                                                    <li>移除cookie
+                                                        <div class="codeMirror">
+                                                            <pre><code>function removeCookie(name)&#123;//这里是用的arguments来获取的,所以可以删除多个cookie值
+        for(key in arguments)&#123;
+            var json =&#123;&#125;;
+            json[arguments[key]]=null;
+            setCookie(json,-1);
+        &#125;
+    &#125;
+    removeCookie('name');</code></pre>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="list" id="s2">
+                                                <h2>2. 本地存储</h2>
+                                                <p></p>
+                                                <h3 id="s2.1">2.1 sessionStorage</h3>
+                                                <p></p>
+                                                <p>sessionStorage属性允许用户访问一个session Storage对象,存储在sessionStorage中的数据在页面会话结束时被清除</p>
+                                                <p></p>
+                                                <p>注意:</p>
+                                                <p></p>
+                                                <ul>
+                                                    <li>页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。</li>
+                                                    <li>在新标签或窗口打开一个页面时会在顶级浏览上下文中初始化一个新的会话,这点和cookies的运行方式不同</li>
+                                                </ul>
+                                                <p></p>
+                                                <h3 id="s2.2">2.2 localStorage</h3>
+                                                <p></p>
+                                                <p>localStorage属性允许用户访问一个了local Storage对象,存储在localStorage中的数据能在跨浏览器会话保留,也就是说该属性中存入的值会在本地存储中永久保存</p>
+                                                <p></p>
+                                                <p>注意:localStorage中的键值对总是以字符串的形式存储,所有如果传入的是非字符串参数会自动转换为字符串,最好手动转化</p>
+                                                <p></p>
+                                                <p>方法</p>
+                                                <p></p>
+                                                <ul>
+                                                    <li>setItem("对象名","对象值"),增加一个数据项目</li>
+                                                    <li>getItem("对象名"),获取一个数据项目</li>
+                                                    <li>removeItem("对象名"),移除一个数据项目</li>
+                                                    <li>clear(),不传参数,移除所有的数据项目</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div class="post-metas mb-3">
+
+
+                                    </div>
+
+                                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+
+
+                                    <div class="post-prevnext row">
+                                        <article class="post-prev col-6">
+
+
+                                            <a href="/2020/10/23/zone-html-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                                                <i class="iconfont icon-arrowleft"></i>
+                                                <span class="hidden-mobile"></span>
+                                                <span class="visible-mobile">Previous</span>
+                                            </a>
+
+                                        </article>
+                                        <article class="post-next col-6">
+
+
+                                            <a href="/2020/10/23/zone-html-%E5%91%BD%E5%90%8D%E5%8F%82%E8%80%83main/">
+                                                <span class="hidden-mobile"></span>
+                                                <span class="visible-mobile">Next</span>
+                                                <i class="iconfont icon-arrowright"></i>
+                                            </a>
+
+                                        </article>
+                                    </div>
+
+                                </div>
+
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+                    <div id="toc">
+                        <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+                        <div id="tocbot"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Custom -->
+
+
+
+    </main>
+
+
+    <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+
+
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+                    <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <input type="text" id="local-search-input" class="form-control validate">
+                        <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+                    </div>
+                    <div class="list-group" id="local-search-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="text-center mt-5 py-3">
+        <div class="footer-content">
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+        </div>
+
+
+
+
+
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/js/debouncer.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Plugins -->
+
+
+
+    <script src="/js/lazyload.js"></script>
+
+
+
+
+
+
+
+
+    <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="/js/clipboard-use.js"></script>
+
+
+
+
+
+
+
+    <script src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var boardCtn = $('#board-ctn');
+            var boardTop = boardCtn.offset().top;
+
+            tocbot.init({
+                tocSelector: '#tocbot',
+                contentSelector: '#post-body',
+                headingSelector: 'h1,h2,h3,h4,h5,h6',
+                linkClass: 'tocbot-link',
+                activeLinkClass: 'tocbot-active-link',
+                listClass: 'tocbot-list',
+                isCollapsedClass: 'tocbot-is-collapsed',
+                collapsibleClass: 'tocbot-is-collapsible',
+                collapseDepth: 0,
+                scrollSmooth: true,
+                headingsOffset: -boardTop
+            });
+            if ($('.toc-list-item').length > 0) {
+                $('#toc').css('visibility', 'visible');
+            }
+        });
+    </script>
+
+
+
+    <script src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+            strings: [
+                '  ',
+                "&nbsp;",
+            ],
+            cursorChar: "_",
+            typeSpeed: 70,
+            loop: false,
+        });
+        typed.stop();
+        $(document).ready(function() {
+            $(".typed-cursor").addClass("h2");
+            typed.start();
+        });
+    </script>
+
+
+
+    <script src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js"></script>
+    <script>
+        anchors.options = {
+            placement: "right",
+            visible: "hover",
+
+        };
+        var el = "h1,h2,h3,h4,h5,h6".split(",");
+        var res = [];
+        for (item of el) {
+            res.push(".markdown-body > " + item)
+        }
+        anchors.add(res.join(", "))
+    </script>
+
+
+
+    <script src="/js/local-search.js"></script>
+    <script>
+        var path = "/local-search.xml";
+        var inputArea = document.querySelector("#local-search-input");
+        inputArea.onclick = function() {
+            searchFunc(path, 'local-search-input', 'local-search-result');
+            this.onclick = null
+        }
+    </script>
+
+
+
+    <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+    <script>
+        $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+            function() {
+                var element = document.createElement('a');
+                $(element).attr('data-fancybox', 'images');
+                $(element).attr('href', $(this).attr('src'));
+                $(this).wrap(element);
+            }
+        );
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

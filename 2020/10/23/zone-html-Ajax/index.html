@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>我的个人博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                档案
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                种类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-23 13:00" pubdate>
+        October 23, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      824 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <div class="content">
+    <div class="main">
+        <div class="title">
+            <h1>Ajax</h1>
+            <p></p>
+            <p>Ajax全称 Asynchronous JavaScript and XML(异步的JavaScript和XML),既是一个对象,也是一种方法模式</p>
+            <p></p>
+            <p>AJAX是一种用于创建快速动态网页的技术,通过在后台与服务器进行少量数据交换,Ajax可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新,传统的不使用Ajax的网页如果需要更新内容,必需重载整个网页面</p>
+        </div>
+        <p></p>
+        <div class="list" id="s1">
+            <h2>1. 原生Ajax</h2>
+            <p></p>
+            <h3 id="s1.1">1.1 用法</h3>
+            <p></p>
+            <h4 id="s1.1.1">1.1.1 创建Ajax对象</h4>
+            <p></p>
+            <ul>
+                <li>通过XMLHttpRequest()类创建一个Ajax对象(此方法不兼容IE6以下浏览器)
+                    <div class="codeMirror">
+                        <pre><code>var Ajax=new XMLHttpRequest();</code></pre>
+                    </div>
+                </li>
+                <li>在IE6以下浏览器通过ActiveXObject("Microsoft.XMLHTTP")创建一个Ajax对象
+                    <div class="codeMirror">
+                        <pre><code>var Ajax=new ActiveXObject("Microsoft.XMLHTTP")</code></pre>
+                    </div>
+                </li>
+            </ul>
+            <p></p>
+            <h4 id="s1.1.2">1.1.2 连接服务器></h4>
+            <p></p>
+            <p>通过open()方法,可以设置跟后台交互的一些行为,该方法有三个参数</p>
+            <p></p>
+            <p>参数:</p>
+            <p></p>
+            <ul>
+                <li>请求方式,一个包含具体请求方式的字符串<br/>主要请求方式</li>
+                <ul>
+                    <li>POST,建议在添加数据时使用</li>
+                    <li>GET,建议在查询数据时使用</li>
+                    <li>PUT,建议在修改数据时使用</li>
+                    <li>DELETE,建议在删除数据时使用</li>
+                </ul>
+                <li>url,要请求数据的具体地址</li>
+                <li>bool,进行同步或异步传输,true为异步,false为同步</li>
+            </ul>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>//请求方式可以用大写也可以用小写
+    Ajax.open("GET","a.txt",true);</code></pre>
+            </div>
+            <p></p>
+            <p>注意:在IE浏览器中,如果通过Ajax发生GET请求,那么IE浏览器认为同一个url只有一个结果，修改文件内容浏览器中显示的值也不会发生改变</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>//一般按照如下格式写
+    Ajax.open("GET","a.txt?t="+newDate().getTime(),true);</code></pre>
+            </div>
+            <p></p>
+            <p>设置需求</p>
+            <p></p>
+            <ul>
+                <li>如果想用GET的时候直接添加需求,可以在url后面加上?再写具体的需求,多个需求通过&符号连接
+                    <div class="codeMirror">
+                        <pre><code>/Ajax.open("GET","https://www.baidu.com?user=zhangsan&pwd=123456",true);</code></pre>
+                    </div>
+                </li>
+                <li>如果是POST请求,需要设置请求头信息,如:
+                    <div class="codeMirror">
+                        <pre><code>//表单格式请求头信息的写法
+    Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //在下一步的send()方法中传入需求
+    Ajax.send(“user=zhangsan&pwd=123456");</code></pre>
+                    </div>
+                </li>
+            </ul>
+            <p></p>
+            <h4 id="s1.1.3">1.1.3 发送请求</h4>
+            <p></p>
+            <p>通过send()方法正式发送请求</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>Ajax.send();</code></pre>
+            </div>
+            <p></p>
+            <h4 id="s1.1.4">1.1.4 返回请求结果</h4>
+            <p></p>
+            <ul>
+                <li>通过readyState(Ajax自身的状态码)属性来返回请求进行到了某一步,该属性存有请求的状态<br/>请求状态</li>
+                <ul>
+                    <li>0: 请求未初始化</li>
+                    <li>1: 服务器连接已建立</li>
+                    <li>2: 请求已接收</li>
+                    <li>3: 请求处理中</li>
+                    <li>4: 请求已完成，且响应已就绪</li>
+                </ul>
+                <li>通过onreadystatechange事件(在状态码发生改变时就会执行此事件)或onload事件来对状态码发生改变时进行操作</li>
+                <li>通过status(http的状态码)属性的值判断请求后的结果从而得到请求信息,一般该值为200到300直接和等于304时代表请求成功,值为404代表请求失败</li>
+                <li>response属性保留着后台返回到前端的数据</li>
+            </ul>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>Ajax.onreadystatechange=function()&#123;
+        if(Ajax.readyState===4)&#123;
+            //确定http的状态码
+            if(Ajax.status>=200&&Ajax.status<300||Ajax.status===304)&#123;
+                console.log(Ajax.response);
+            &#125;
+        &#125;
+    &#125;</code></pre>
+            </div>
+            <p></p>
+            <h3 id="s1.2">1.2 超时请求</h3>
+            <p></p>
+            <p>如果请求事件太长就是请求超时,如果事件过长则可能内部出现了错了,可以设置超过一定时间结束请求</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>//可以通过定时器进行结束请求
+    setTimeout(function()&#123;
+        Ajax.abort();
+    &#125;,3000)
+    //低版本IE可以使用
+    Ajax.timeout=3000;</code></pre>
+            </div>
+            <p></p>
+            <h3 id="s1.3">1.3 跨域请求</h3>
+            <p></p>
+            <p>如果通过Ajax跨域传输一个请求,浏览器会自动将该请求阻止并返回报错信息。如果要进行跨域就要进行特殊方法进行实现</p>
+            <p></p>
+            <p>实现跨域</p>
+            <p></p>
+            <ul>
+                <li>JOSNP方式,通过script标签中的src属性传输请求</li>
+                <li>CORS方式,在后台中设置可以让对应的域进行访问</li>
+                <li>通过信任服务器代理请求进入(翻墙)</li>
+            </ul>
+            <p></p>
+            <h3 id="s1.4">1.4 封装Ajax</h3>
+            <p></p>
+            <div class="codeMirror">
+                <pre><code>/function request()&#123;
+        ajax(&#123;
+            type:'POST',//请求类型
+            url:'data.json',//请求路径
+            asyn:true,//是否异步
+            data:&#123;//数据
+                username:'千寻',
+                password:'888'
+            &#125;,
+            dataType:'text',//请求数据类型
+            success:function(response)&#123;//请求成功处理函数
+                console.log( response );
+                var response = JSON.parse(response);
+                console.log( response[2].name );
+            &#125;,
+            error:function(status)&#123;//请求失败处理函数
+                console.log(status);
+    
+            &#125;
+    
+        &#125;)
+    
+    &#125;
+    
+    //Ajax 封装
+    function ajax(obj)&#123;
+        var type = obj.type||'GET',//请求类型
+            url = obj.url,//url处理
+            asny = obj.asny!==true,//异步处理
+            data = '',//预设写入数据
+            dataType = obj.dataType||'json',//请求类型
+            success = obj.success,//回调函数
+            error = obj.error;//错误处理函数
+        for(key in obj.data)&#123;//数据处理
+            data += key+'='+obj.data[key]+'&';
+        &#125;
+        data = encodeURI(data);
+        //console.log(data);
+        var xhr=new XMLHttpRequest();
+        //console.log(xhr);
+        if(window.XMLHttpRequest)&#123;
+            xhr = new XMLHttpRequest();
+        &#125;else&#123;
+            try&#123;
+                xhr = new ActiveXObject('Msxml2.XMLHTTP.6.0');
+            &#125;catch(e)&#123;
+                xhr = new ActiveXObject('Msxml2.XMLHTTP.3.0');
+            &#125;
+        &#125;
+        //如果是GET请求方式,设置数据
+        if(type.toUpperCase() == 'GET')&#123;
+            var date = new Date().getTime();//添加一个时间用来处理，GET方式缓存的问题
+            //console.log(date);
+            url = url+'?'+data+date;
+            data =null;
+        &#125;else if(dataType.toUpperCase() == 'XML')&#123;
+            data =null;
+        &#125;
+        xhr.open(type,url,asny);//请求架设
+        xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
+        //设置请求头信息
+        //console.log(data);
+        xhr.send(data);//发送数据
+        xhr.onreadystatechange= function()&#123;//监听请求
+            //readyState 为XMLHttpRequest对象的状态
+            //status 为服务器返回的http状态码
+    
+            if(xhr.readyState== 4 && xhr.status==200)&#123;
+                var response;
+                if(dataType === 'json' || dataType === 'text')&#123;
+                    if(dataType === 'json')&#123;
+                        //解析json数据
+                        response = JSON.parse(xhr.responseText);
+                    &#125;else&#123;
+                        //普通数据
+                        response = xhr.responseText;
+                    &#125;
+    
+                &#125;else&#123;
+                    response = xhr.responseXML;
+                &#125;
+                success&&success(response);
+            &#125;else&#123;
+                error&&error(xhr.status);
+            &#125;
+        &#125;
+    
+    &#125;</code></pre>
+            </div>
+        </div>
+        <p></p>
+        <div class="list" id="s2">
+            <h2>2.Fetch</h2>
+            <p></p>
+            <p>传统的Ajax指的是XMLHttpResquest(XHR),现在已经已经可以用fetch来代替</p>
+            <p></p>
+            <p>注意:</p>
+            <p></p>
+            <ul>
+                <li>Fetch是全局对象的方法,可以直接使用</li>
+                <li>Fetch是基于Promise设计的,所以值能在支持ES6版本的浏览器使用</li>
+            </ul>
+            <p></p>
+            <h3 id="s2.1">2.1 用法</h3>
+            <p></p>
+            <h4 id="s2.1.1">2.1.1 Fetch的参数</h4>
+            <p></p>
+            <ul>
+                <li>url,该参数定义要获取的资源,可以是一个url字符串,也可以是一个Request对象</li>
+                <li>options,该参数可选,为一个对象,内部含有一些对请求的设置属性<br/>内部属性</li>
+                <ul>
+                    <li>method:请求使用的方法。如:GET、POST等</li>
+                    <li>headers:请求头信息。形式为Headers对象或ByteString</li>
+                    <li>body:请求的body信息,可能是一个Blob、BufferSource、FormData、URLSearchParams或者USVString对象。注意GET或HEAD方法的请求不能包含body信息</li>
+                    <li>mode:请求的模式。如cors、no-cors或者same-origin</li>
+                    <li>credentiala:请求的credentials。如omit、same-origin或者include</li>
+                    <li>cache:请求的cache模式:default,no-store,reload,no-cache或者only-if-cached</li>
+                </ul>
+            </ul>
+            <p></p>
+            <h4 id="s2.1.2">2.1.2 response</h4>
+            <p></p>
+            <p>response为一个Promise对象成功时传回的对象,该属性含有对应返回数据的属性和方法</p>
+            <p></p>
+            <ul>
+                <li>属性</li>
+                <ul>
+                    <li>status (number),HTTP请求结果参数,在100-599范围</li>
+                    <li>statusText (string),服务器返回的状态报告</li>
+                    <li>ok (boolean),如果返回200表示请求成功则为true</li>
+                    <li>headers (Headers),返回头部信息,该属性后面也有对应的方法</li>
+                    <ul>
+                        <li>has(name) (boolean),判断是否存在该信息头</li>
+                        <li>get(name) (string),获取信息头的数据</li>
+                        <li>getAll(name) (Array),获取所有头部数据</li>
+                        <li>set(name,value),设置请求头信息</li>
+                        <li>append(name,value),添加header的内容</li>
+                        <li>delete(name),删除header的信息</li>
+                        <li>forEach(function(value,name){...},[thisContext]),循环读取header的信息</li>
+                    </ul>
+                    <li>url (string),详细的地址</li>
+                </ul>
+                <li>方法</li>
+                <ul>
+                    <li>text(),以string的形式生成请求text</li>
+                    <li>json(),生成JSON.parse(responseText)的结果</li>
+                    <li>blob(),生成一个Blob</li>
+                    <li>arrayBuffer(),生成一个ArrayBuffer</li>
+                    <li>formData(),生成格式化数据,可用于其它的请求</li>
+                </ul>
+                <li>其他方法</li>
+                <ul>
+                    <li>clone(),创建一个Response对象的克隆</li>
+                    <li>Response.error(),返回一个绑定了网络错误的新的Response对象</li>
+                    <li>Response.redirect(),用另一个URL创建一个新的Resonse对象</li>
+                </ul>
+            </ul>
+            <p></p>
+            <h4 id="s2.1.3">2.1.3 使用案例</h4>
+            <p></p>
+            <ul>
+                <li>get
+                    <div class="codeMirror">
+                        <pre><code>fetch("a.html").then(function(response)&#123;
+        return response.text();
+    &#125;).then(function(body)&#123;
+        document.body.innerHTML=body;
+    &#125;);</code></pre>
+                    </div>
+                </li>
+                <li>post
+                    <div class="codeMirror">
+                        <pre><code>fetch("a.html",&#123;
+        method:"POST",
+        headers:&#123;
+            "Accept":"application/json",
+            "Content-Type":"application/json";
+        &#125;,
+        body:JSON.stringify(&#123;
+            user:"zhangsan",
+            pwd:123456;
+        &#125;)
+    &#125;)</code></pre>
+                    </div>
+                </li>
+            </ul>
+            <p></p>
+            <h3 id="s2.2">2.2 与原生Ajax的比较</h3>
+            <p></p>
+            <ul>
+                <li>原生Ajax
+                    <div class="codeMirror">
+                        <pre><code>var Ajax=new XMLHttpRequest();
+    Ajax.open("GET",url);
+    Ajax.responseType="json";
+    Ajax.send();
+    Ajax.onreadystatechange=function()&#123;
+        console.log(Ajax.response);
+    &#125;;
+    Ajax.onerror=function()&#123;
+        console.log("error");
+    &#125;;</code></pre>
+                    </div>
+                </li>
+                <li>Fetch
+                    <div class="codeMirror">
+                        <pre><code>fetch(url).then(function(response)&#123;
+        return response.json();//相当于JSON.parse(response);
+    &#125;).then(function(data)&#123;
+        console.log(data);
+    &#125;).catch(function(err)&#123;
+        console.log("error",err);
+    &#125;);
+    
+    //使用箭头函数
+    fetch(url).then(
+        response=>response.json();
+    ).then(
+        data=>console.log(data);
+    ).catch(
+        err=>console.log("error",err);
+    );
+    //使用async函数
+    let Fetch=async function()&#123;
+        try&#123;
+            let response=await fetch(url);
+            let data=await response.json();
+            console.log(data);   
+        &#125;catch(err)&#123;
+            console.log("error",err);
+        &#125;
+    &#125;</code></pre>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/23/zone-html-BOM/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,718 +1,426 @@
-
-
 <!DOCTYPE html>
+
 <html lang="en" data-default-color-scheme=&#34;auto&#34;>
 
 
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="">
-  <title>Hexo</title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    <meta name="theme-color" content="#2f4154">
+    <meta name="description" content="">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="">
+    <title>Hexo</title>
 
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+    <!-- 主题依赖的图标库，不要自行修改 -->
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
 
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <!-- 自定义样式保持在最底部 -->
+
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/color-schema.js"></script>
+    <meta name="generator" content="Hexo 5.2.0">
+</head>
 
 
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>我的个人博客</strong>&nbsp;</a>
+    <header style="height: 100vh;">
+        <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">&nbsp;<strong>我的个人博客</strong>&nbsp;</a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+                <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="animated-icon"><span></span><span></span><span></span></div>
+                </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                档案
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                种类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="iconfont icon-home-fill"></i> 首页
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/archives/">
+                                <i class="iconfont icon-archive-fill"></i> 档案
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories/">
+                                <i class="iconfont icon-category-fill"></i> 种类
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tags/">
+                                <i class="iconfont icon-tags-fill"></i> 标签
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">
+                                <i class="iconfont icon-user-fill"></i> 关于
+                            </a>
+                        </li>
+                        <li class="nav-item" id="search-btn">
+                            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+                        </li>
+
+                        <li class="nav-item" id="color-toggle-btn">
+                            <a class="nav-link" href="javascript:">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
+                        </li>
 
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="banner intro-2" id="background" parallax=true style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
-              
-            </span>
-
-            
-          </div>
-
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
+            <div class="full-bg-img">
+                <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+                    <div class="container page-header text-center fade-in-up">
+                        <span class="h2" id="subtitle"></span>
+                    </div>
+                    <div class="scroll-down-bar">
+                        <i class="iconfont icon-arrowdown"></i>
+                    </div>
+                </div>
             </div>
-          
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+    <main>
+        <div class="container nopadding-md">
+            <div class="py-5" id="board" style=margin-top:0>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 m-auto">
+                            <div class="row mx-auto index-card">
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
+                                        <a href="/2020/10/23/zone-html-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">使用Hexo＋Github搭建个人博客</a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"></a>
+                                    </p>
+
+                                    <div class="index-btm post-metas">
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="row mx-auto index-card">
 
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/hello-world/">Hello World</a>
-      </h1>
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/hello-world/">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
+                                        <a href="/2020/10/23/zone-html-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">存储数据</a>
+                                    </h1>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 14:31" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/"></a>
+                                    </p>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"></a>
-      </h1>
+                                    <div class="index-btm post-metas">
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-          
-          
-            
-          
-          
-    
-        
-            使用Hexo＋Github搭建个人博客
-        
-        
-        
-            只需简单三步，小白也能搭建属于自己的个人博客。
-            工具为hexo＋github，环境为windows10。如有错误，欢迎留言或联系作者，也欢迎大佬指正
-            
-            1.
-        </a>
-      </p>
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                            <div class="row mx-auto index-card">
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/"></a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">
-          
-          
-            
-          
-          
-    
-        
-            存储数据
-        
-        
-        
-            1. Cookie
-            
-            cookie用于存储数据,当用户访问了某个网站(网页)的时候,可以通过cookie来访问客户端上存储的数据
-            
-            注意:
-           
-        </a>
-      </p>
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                        <a href="/2020/10/23/zone-html-%E5%91%BD%E5%90%8D%E5%8F%82%E8%80%83main/">命名参考</a>
+                                    </h1>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/%E5%91%BD%E5%90%8D%E5%8F%82%E8%80%83main/"></a>
-      </h1>
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-%E5%91%BD%E5%90%8D%E5%8F%82%E8%80%83main/"></a>
+                                    </p>
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/%E5%91%BD%E5%90%8D%E5%8F%82%E8%80%83main/">
-          
-          
-            
-          
-          
-    
-        
-            命名参考
-        
-        
-        
-            1.网页内容类
-            
-            标题: title
-            摘要: summary
-            箭头： arrow
-             商标： label
-            网站标志：
-        </a>
-      </p>
+                                    <div class="index-btm post-metas">
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/Vue%E9%A1%B9%E7%9B%AE/"></a>
-      </h1>
+                            <div class="row mx-auto index-card">
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/Vue%E9%A1%B9%E7%9B%AE/">
-          
-          
-            
-          
-          
-    
-        
-            Vue项目创建打包与UI资源
-        
-        
-        
-            1. Vue项目创建
-            
-            1.1 vue-cli脚手架
-            
-            vue-cli是一个基于vue的构建工具,用于搭建vue项目的环境,有着兼容,方便,快
-        </a>
-      </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/Vue%E7%AE%80%E6%98%93%E6%A1%88%E4%BE%8B/"></a>
-      </h1>
+                                        <a href="/2020/10/23/zone-html-Vue%E9%A1%B9%E7%9B%AE/">Vue项目创建打包与UI资源</a>
+                                    </h1>
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/Vue%E7%AE%80%E6%98%93%E6%A1%88%E4%BE%8B/">
-          
-          
-            
-          
-          
-    
-        
-            Vue简易案例
-        
-        
-        
-            1.Vue实现城市选择
-            
-            当选择不同省的时候,会在后一个城市的选择中出现对应省的城市
-            
-            
-                
-    
-        
-  
-        </a>
-      </p>
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Vue%E9%A1%B9%E7%9B%AE/"></a>
+                                    </p>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                    <div class="index-btm post-metas">
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"></a>
-      </h1>
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
-          
-          
-            
-          
-          
-    
-        
-            Vue源码解析
-        
-        
-        
-            1.数据驱动
-            
-            1.1 Vue与模板
-            
-            使用步骤:
-            
-            
-                编写页面模板
-   
-        </a>
-      </p>
+                            <div class="row mx-auto index-card">
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/Vue%E6%8F%92%E4%BB%B6/"></a>
-      </h1>
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/Vue%E6%8F%92%E4%BB%B6/">
-          
-          
-            
-          
-          
-    
-        
-            Vue插件
-        
-        
-        
-            1.vue-codemirror
-            
-            
-                npm i codemirror --save
-            
-            
-            
-      
-        </a>
-      </p>
+                                        <a href="/2020/10/23/zone-html-Vue%E7%AE%80%E6%98%93%E6%A1%88%E4%BE%8B/">Vue简易案例</a>
+                                    </h1>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Vue%E7%AE%80%E6%98%93%E6%A1%88%E4%BE%8B/"></a>
+                                    </p>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/Vue.js/"></a>
-      </h1>
+                                    <div class="index-btm post-metas">
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/Vue.js/">
-          
-          
-            
-          
-          
-    
-        
-            Vue.js
-        
-        
-        
-            1.Vue的特性
-            
-            Vue是一套用于构建用户界面的渐进式框架,与其它大型框架不同的是,Vue 被设计为可以自底向上逐层应用,Vue拥有以下特性:
-            
-            
-    
-        </a>
-      </p>
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                            <div class="row mx-auto index-card">
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/23/zone/html/node/"></a>
-      </h1>
 
-      <p class="index-excerpt">
-        <a href="/2020/10/23/zone/html/node/">
-          
-          
-            
-          
-          
-    
-        
-            Node.js
-        
-    
-    
-    
-        1. 认识Node.js
-        
-        
-            Node.js既不是一门语言,也不是一个库或框架,而只是一个构建在Chrome的V8引擎上的一个JS的运行环境,可以解析和执行JS代码,在以前只能在浏览器中解析执行JS代码,而现在
-        </a>
-      </p>
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-23 13:00" pubdate>
-              2020-10-23
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+                                        <a href="/2020/10/23/zone-html-Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">Vue源码解析</a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"></a>
+                                    </p>
+
+                                    <div class="index-btm post-metas">
+
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="row mx-auto index-card">
+
+
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
+
+                                        <a href="/2020/10/23/zone-html-Vue%E6%8F%92%E4%BB%B6/">Vue插件</a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Vue%E6%8F%92%E4%BB%B6/"></a>
+                                    </p>
+
+                                    <div class="index-btm post-metas">
+
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="row mx-auto index-card">
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
+
+                                        <a href="/2020/10/23/zone-html-Vue-js/"></a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Vue-js/">Vue.js</a>
+                                    </p>
+
+                                    <div class="index-btm post-metas">
+
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="row mx-auto index-card">
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
+
+                                        <a href="/2020/10/23/zone-html-node/">Node.js</a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-node/"></a>
+                                    </p>
+
+                                    <div class="index-btm post-metas">
+
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="row mx-auto index-card">
+                                <article class="col-12 col-md-12 mx-auto index-info">
+                                    <h1 class="index-header">
+
+                                        <a href="/2020/10/23/zone-html-Mongodb/">Mongodb</a>
+                                    </h1>
+
+                                    <p class="index-excerpt">
+                                        <a href="/2020/10/23/zone-html-Mongodb/"></a>
+                                    </p>
+                                    <div class="index-btm post-metas">
+
+                                        <div class="post-meta mr-3">
+                                            <i class="iconfont icon-date"></i>
+                                            <time datetime="2020-10-23 13:00" pubdate>2020-10-23</time>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 
 
 
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
+                            <nav aria-label="navigation">
+                                <span class="pagination" id="pagination">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
-  
-  <script>
-    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
-      ele.href += '#board';
-    }
-  </script>
+                                </span>
+                            </nav>
 
-
-
-              </div>
+                            <script>
+                                for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+                                    ele.href += '#board';
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    
-  </main>
 
-  
+    </main>
+
+
     <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
-  
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+                    <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <input type="text" id="local-search-input" class="form-control validate">
+                        <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+                    </div>
+                    <div class="list-group" id="local-search-result"></div>
+                </div>
+            </div>
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
     </div>
-  </div>
-</div>
-  
-
-  
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
-  
-
-  
-
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
 
 
 
-  
+
+    <footer class="text-center mt-5 py-3">
+        <div class="footer-content">
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+        </div>
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+
+
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/js/debouncer.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Plugins -->
+
+
+
+    <script src="/js/lazyload.js"></script>
+
+
+
+
+
+
+
+
+    <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="/js/clipboard-use.js"></script>
 
 
 
@@ -722,37 +430,37 @@ Quick
 
 
 
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "欢迎来到我的个人博客&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
+    <script src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+            strings: [
+                '  ',
+                "欢迎来到我的个人博客&nbsp;",
+            ],
+            cursorChar: "_",
+            typeSpeed: 70,
+            loop: false,
+        });
+        typed.stop();
+        $(document).ready(function() {
+            $(".typed-cursor").addClass("h2");
+            typed.start();
+        });
+    </script>
 
 
 
 
 
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
+    <script src="/js/local-search.js"></script>
+    <script>
+        var path = "/local-search.xml";
+        var inputArea = document.querySelector("#local-search-input");
+        inputArea.onclick = function() {
+            searchFunc(path, 'local-search-input', 'local-search-result');
+            this.onclick = null
+        }
+    </script>
 
 
 
@@ -771,4 +479,5 @@ Quick
 
 
 </body>
+
 </html>
