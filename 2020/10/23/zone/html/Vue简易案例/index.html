@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="linken的个人博客">
+  <meta name="author" content="Linken">
+  <meta name="keywords" content="">
+  <title></title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Linken的个人博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                档案
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                种类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-23 13:00" pubdate>
+        October 23, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      762 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <div class="content">
+    <div class="main">
+        <div class="title">
+            <h1>Vue简易案例</h1>
+        </div>
+        <p></p>
+        <div class="list" id="s1">
+            <h2>1.Vue实现城市选择</h2>
+            <p></p>
+            <p>当选择不同省的时候,会在后一个城市的选择中出现对应省的城市</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><div id="app">
+    <select v-model="province"><!--通过v-modle双向绑定province-->
+        <option v-for="item in provinces" :value="item"></option>
+    </select>
+    <select v-model="city">
+        <option v-for="item in cities" :value="item"></option>
+    </select>
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            provinces:[],
+            cities:[],
+            province:null,
+            city:null,
+        },
+        watch:{
+            province(value){//通过监听province的值来实现动态改变cities的值,一般都是通过接口赋值
+                if(value==="浙江省"){
+                    this.cities=["杭州市","嘉兴市"]
+                }else if(value==="四川省"){
+                    this.cities=["成都市","绵阳市","乐山市"]
+                }
+            }  
+        },
+        created(){
+            //真实案例是通过接口实现
+            this.provinces=[
+                "省",
+                "浙江省",
+                "四川省"
+            ]
+        }
+    })
+</script></xmp></pre>
+            </div>
+        </div>
+        <div class="list" id="s2">
+            <h2>2. Vue-computed实现登录效果</h2>
+            <p></p>
+            <p></p>
+            <p>通过Vue的计算属性对登录按钮实现控制,只有当所有的内容都填写完毕后才能够使用登录按钮</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><div id="app">
+    <form @submit.prevent="login">
+        <input type="text" v-model="mobile">
+        <input type="password" v-model="password">
+        <button type="submit" :disabled="!isValid">
+            Login
+        </button>
+    </form>
+ </div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            mobile:"",
+            password:""
+        },
+        computed:{
+            isValid(){
+                return String(this.mobile).match(/^1\d{10}$/)&&String(this.password.length)>=6
+            }
+        },
+        methods:{
+            login(){
+                window.location.href="https://www.baidu.com/";
+            }
+        }
+    })
+</script></xmp></pre>
+            </div>
+        </div>
+        <div class="list" id="s3">
+            <h2>3.大数据加载特效</h2>
+            <p></p>
+            <p></p>
+            <p>通过Vue的计算属性对登录按钮实现控制,只有当所有的内容都填写完毕后才能够使用登录按钮</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><template>
+<div class="dv-loading">
+    <svg width="50px" height="50px">
+        <circle
+          cx="25"
+          cy="25"
+          r="20"
+          fill="transparent"
+          stroke-width="3"
+          stroke-dasharray="31.415 31.415"
+          stroke="#02bcfe"
+          stroke-linecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="0, 25 25;360, 25 25"
+            dur="1.5s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="stroke"
+            values="#02bcfe;#3be6cb;#02bcfe"
+            dur="3s"
+            repeatCount="indefinite"
+          />
+        </circle>
+  
+        <circle
+          cx="25"
+          cy="25"
+          r="10"
+          fill="transparent"
+          stroke-width="3"
+          stroke-dasharray="15.7 15.7"
+          stroke="#3be6cb"
+          stroke-linecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="360, 25 25;0, 25 25"
+            dur="1.5s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="stroke"
+            values="#3be6cb;#02bcfe;#3be6cb"
+            dur="3s"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </svg>
+      <div class="loading-tip">
+        <slot />
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'DvLoading'
+  }
+  </script>
+  
+  <style lang="less" scoped>
+  .dv-loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dv-loading .loading-tip {
+    font-size: 15px;
+  }
+  </style></xmp></pre>
+            </div>
+        </div>
+        <div class="list" id="s4">
+            <h2>4.Vue指令实现拖拽功能</h2>
+            <p></p>
+            <p></p>
+            <p>通过Vue的计算属性对登录按钮实现控制,只有当所有的内容都填写完毕后才能够使用登录按钮</p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp>// 这个助手方法下面会用到，用来获取 css 相关属性值
+const getAttr = (obj, key) =>
+obj.currentStyle
+? obj.currentStyle[key]
+: window.getComputedStyle(obj, false)[key]
+
+const vDrag = {
+inserted(el) {
+/**
+ * 这里是跟据 dialog 组件的 dom 结构来写的
+ * target: dialog 组件的容器元素
+ * header：dialog 组件的头部区域，也是就是拖拽的区域
+ */
+const target = el.children[0]
+const header = target.children[0]
+
+// 鼠标手型
+header.style.cursor = 'move'
+header.onmousedown = e => {
+  // 记录按下时鼠标的坐标和目标元素的 left、top 值
+  const currentX = e.clientX
+  const currentY = e.clientY
+  const left = parseInt(getAttr(target, 'left'))
+  const top = parseInt(getAttr(target, 'top'))
+
+  document.onmousemove = event => {
+    // 鼠标移动时计算每次移动的距离，并改变拖拽元素的定位
+    const disX = event.clientX - currentX
+    const disY = event.clientY - currentY
+    target.style.left = `${left + disX}px`
+    target.style.top = `${top + disY}px`
+
+    // 阻止事件的默认行为，可以解决选中文本的时候拖不动
+    return false
+  }
+
+  // 鼠标松开时，拖拽结束
+  document.onmouseup = () => {
+    document.onmousemove = null
+    document.onmouseup = null
+  }
+  // 分别计算四个方向的边界值
+  const minLeft =
+    target.offsetLeft + parseInt(getAttr(target, 'width')) - 50
+  const maxLeft =
+    parseInt(getAttr(document.body, 'width')) - target.offsetLeft - 50
+  const minTop = target.offsetTop
+  const maxTop =
+    parseInt(getAttr(document.body, 'height')) -
+    target.offsetTop -
+    parseInt(getAttr(header, 'height'))
+
+  document.onmousemove = event => {
+    // 鼠标移动时计算每次移动的距离，并改变拖拽元素的定位
+    const disX = event.clientX - currentX
+    const disY = event.clientY - currentY
+
+    // 判断左、右边界
+    if (disX < 0 && disX <= -minLeft) {
+      target.style.left = `${left - minLeft}px`
+    } else if (disX > 0 && disX >= maxLeft) {
+      target.style.left = `${left + maxLeft}px`
+    } else {
+      target.style.left = `${left + disX}px`
+    }
+
+    // 判断上、下边界
+    if (disY < 0 && disY <= -minTop) {
+      target.style.top = `${top - minTop}px`
+    } else if (disY > 0 && disY >= maxTop) {
+      target.style.top = `${top + maxTop}px`
+    } else {
+      target.style.top = `${top + disY}px`
+    }
+    return false
+  }
+}
+},
+
+// 每次重新打开 dialog 时，要将其还原
+update(el) {
+const target = el.children[0]
+target.style.left = ''
+target.style.top = ''
+},
+
+// 最后卸载时，清除事件绑定
+unbind(el) {
+const header = el.children[0].children[0]
+header.onmousedown = null
+}
+}
+
+export default vDrap</xmp></pre>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="codeMirror">
+                <pre><xmp><!-- 使用 -->
+<el-dialog v-drag title="对话框" :visible.sync="dialogVisible"></el-dialog></xmp></pre>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/23/zone/html/Vue%E9%A1%B9%E7%9B%AE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/23/zone/html/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
